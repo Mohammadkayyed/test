@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .testimonials-container {
+            width: 60%;
+            margin: auto;
+            overflow: hidden;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        .testimonial {
+            display: none;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .testimonial p {
+            margin: 0;
+            font-size: 18px;
+            line-height: 1.4;
+        }
+
+        .testimonial cite {
+            display: block;
+            margin-top: 15px;
+            font-style: italic;
+            color: #888;
+        }
+
+        #testimonial1 {
+            display: block;
+        }
+
+        .nav-buttons {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #e10000;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+
+        .arrow {
+            font-size: 24px;
+        }
+    </style>
+    <title>Testimonials Slider</title>
+</head>
+
+<body>
+
+    <div class="testimonials-container">
+        <div class="testimonial" id="testimonial1">
+            <p>"Great service! Highly recommended."</p>
+            <cite>- John Doe</cite>
+        </div>
+        <div class="testimonial" id="testimonial2">
+            <p>"Excellent team and quick response."</p>
+            <cite>- Jane Smith</cite>
+        </div>
+        <div class="testimonial" id="testimonial3">
+            <p>"Outstanding work. Will use them again!"</p>
+            <cite>- Bob Johnson</cite>
+        </div>
+
+        <div class="nav-buttons">
+            <button onclick="prevTestimonial()" class="arrow">&#9665;</button>
+            <button onclick="nextTestimonial()" class="arrow">&#9655;</button>
+        </div>
+    </div>
+
+    <script>
+        let currentTestimonial = 1;
+        let autoSwitch;
+
+        function showTestimonial(index) {
+            document.getElementById(`testimonial${currentTestimonial}`).style.display = "none";
+            currentTestimonial = index;
+            document.getElementById(`testimonial${currentTestimonial}`).style.display = "block";
+        }
+
+        function prevTestimonial() {
+            showTestimonial((currentTestimonial - 1 + 3) % 3 || 3);
+            resetAutoSwitch();
+        }
+
+        function nextTestimonial() {
+            showTestimonial((currentTestimonial + 1) % 3 || 3);
+            resetAutoSwitch();
+        }
+
+
+        //كل 5 ثواني بتحرك
+        function switchTestimonialsAutomatically() {
+            autoSwitch = setInterval(() => {
+                nextTestimonial();
+            }, 5000);
+        }
+
+        function resetAutoSwitch() {
+            clearInterval(autoSwitch);
+            switchTestimonialsAutomatically();
+        }
+
+        showTestimonial(currentTestimonial);
+
+        switchTestimonialsAutomatically();
+    </script>
+
+</body>
+
+</html>

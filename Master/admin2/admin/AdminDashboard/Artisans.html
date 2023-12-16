@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Candal|Lora" rel="stylesheet">
+
+    <!-- Custom Styling -->
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <!-- Admin Styling -->
+    <link rel="stylesheet" href="../../css/admin.css">
+
+    <title>Admin Section - Manage Topics</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="/Home/HomePage.html"><img src="/Img/Screenshot 2023-11-25 141054.png" alt=""></a>
+        </div>
+    </header>
+
+    <!-- Admin Page Wrapper -->
+    <div class="admin-wrapper">
+
+        <!-- Left Sidebar -->
+        <div class="left-sidebar">
+            <ul>
+                <li><a href="/Home/HomePage.html">Home</a></li>
+                <li><a href="/admin2/admin/AdminDashboard/General.html">General</a></li>
+                <li><a href="/admin2/admin/AdminDashboard/ProfileAdmin.html">Profile</a></li>
+                <li><a href="/admin2/admin/AdminDashboard/Artisans.html">Artisans</a></li>
+            </ul>
+        </div>
+        <!-- // Left Sidebar -->
+
+        <!-- Admin Content -->
+        <div class="admin-content">
+            <div class="content">
+                <div class="content-head">
+                    <h2 class="page-title">All artisans</h2>
+                    <input type="search" id="searchInput"
+                        placeholder="Search" class="search-input" style="width: 250px; height: 40px; border-radius: 5px;">
+                    <button class="btn-search" onclick="searchArtisans()">Search</button>
+                </div>
+                <table id="artisansTable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Specialty</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="Artisan.js"></script>
+
+
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Candal|Lora" rel="stylesheet">
+
+    <!-- Custom Styling -->
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <!-- Admin Styling -->
+    <link rel="stylesheet" href="../../css/admin.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+        }
+
+        .custom-form {
+            margin-top: 50px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .form-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+
+    <title>Admin Section - Manage Posts</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1 class="logo-text"><span>Velvet</span>Strides</h1>
+        </div>
+        <i class="fa fa-bars menu-toggle"></i>
+        <ul class="nav">
+            <li>
+                <a href="#">
+                    <i class="fa fa-user"></i>
+                    Awa Melvine
+                    <i class="fa fa-chevron-down" style="font-size: .8em;"></i>
+                </a>
+                <ul>
+                    <li><a href="#" class="logout">Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+
+    <!-- Admin Page Wrapper -->
+    <div class="admin-wrapper">
+
+        <!-- Left Sidebar -->
+        <div class="left-sidebar">
+            <ul>
+                <li><a href="/Home/HomePage.html">Home</a></li>
+                <li><a href="/admin2/admin/ArtisanDashboard/ProfileArtisan.html">Profile</a></li>
+                <li><a href="/admin2/admin/ArtisanDashboard/Artisan.html">Specialty</a></li>
+            </ul>
+        </div>
+        <!-- // Left Sidebar -->
+
+
+        <!-- Admin Content -->
+        <div class="admin-content">
+            <div class="button-group">
+                <a href="create.html" class="btn btn-big">Add Product</a>
+                <a href="index.html" class="btn btn-big">Manage Product</a>
+            </div>
+            <div class="container-artisans">
+                <form id="artisanForm" class="custom-form">
+                    <label for="phone_number" class="form-label">Phone Number:</label>
+                    <input type="text" id="phone_number" name="phone_number" class="form-input" required>
+
+                    <label for="years_of_experience" class="form-label">Years of Experience:</label>
+                    <input type="number" id="years_of_experience" name="years_of_experience" class="form-input"
+                        required>
+
+                    <label for="jerny" class="form-label">Jerny:</label>
+                    <textarea id="jerny" name="jerny" class="form-textarea" required></textarea>
+
+                    <label for="formal_education" class="form-label">Formal Education:</label>
+                    <input type="text" id="formal_education" name="formal_education" class="form-input" required>
+
+                    <label for="apprenticeships" class="form-label">Apprenticeships:</label>
+                    <textarea id="apprenticeships" name="apprenticeships" class="form-textarea" required></textarea>
+
+                    <label for="association_memberships" class="form-label">Association Memberships:</label>
+                    <input type="text" id="association_memberships" name="association_memberships" class="form-input"
+                        required>
+
+                    <button type="button" onclick="submitForm()" class="form-button">Submit</button>
+                </form>
+            </div>
+        </div>
+        <!-- // Admin Content -->
+
+    </div>
+    <!-- // Page Wrapper -->
+
+
+
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Custom Script -->
+    <script src="../../js/scripts.js"></script>
+
+</body>
+
+</html>

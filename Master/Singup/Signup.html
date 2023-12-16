@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="Signup.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <img src="../Img/Screenshot 2023-11-25 141054.png" alt="" />
+            <div id="btn1" class="btn1">
+                <i id="btn-open" class="fa-solid fa-bars"></i>
+                <i id="btn-close" class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+        <div class="nav-right">
+
+            <ul id="list">
+                <li><a href="../Home/HomePage.html">Home</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="../Singup/Signup.html">Signup</a></li>
+                <li><a href="../Login/Login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <form autocomplete="on">
+        <div class="signup-container">
+            <h2>Sign Up</h2>
+            <br>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required autocomplete="username">
+                <span id="usernameError" class="error-message"></span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required autocomplete="email">
+                <span id="emailError" class="error-message"></span>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required autocomplete="new-password">
+                <span id="passwordError" class="error-message"></span>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required autocomplete="new-password">
+                <span id="confirmPasswordError" class="error-message"></span>
+            </div>
+            <p style="text-align: center;">Are you?</p>
+            <p id="userTypeError" class="error-message"></p>
+            <br>
+            <div class="form-group-radio">
+                <input type="radio" id="regularUser" name="userType" value="regularUser" required>
+                <label for="regularUser"><i class="fa-solid fa-user"></i>User</label>
+                <input type="radio" id="Artisan" name="userType" value="Artisan" required>
+                <label for="Artisan"><i class="fa-solid fa-user-gear"></i>Artisan</label>
+            </div>
+            <button type="button" onclick="signup()">Sign Up</button>
+            <br>
+            <br>
+            <p style="text-align: center; width: 100%; font-size: 16px;">Do you already have an account? <a href="../Login/Login.html">Login</a></p>
+        </div>
+    </form>
+    
+
+    <script src="Signup.js"></script>
+
+</body>
+
+</html>

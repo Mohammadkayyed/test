@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="workerSec.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,500&display=swap" rel="stylesheet">
+
+  <title>Document</title>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="nav-left">
+      <a href="HomePage.html"><img src="../Img/Screenshot 2023-11-25 141054.png" alt="" /></a>
+      <div id="btn1" class="btn1">
+        <i id="btn-open" class="fa-solid fa-bars"></i>
+        <i id="btn-close" class="fa-solid fa-xmark"></i>
+      </div>
+    </div>
+    <div class="nav-right">
+      <ul id="list">
+        <li><a href="../Home/HomePage.html">Home</a></li>
+        <li><a href="/Our-policy/Ourpolicy.html">Our policy</a></li>
+        <li><a href="/Services/Services.html">Services</a></li>
+        <li><a href="/admin2/admin/categorey/index.html" id="dashboardLink">Dashboard</a></li>
+        <li><a href="/admin2/" id="logoutLink" onclick="logout()">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="workerContainer">
+
+
+    <div class="servicProvider">
+      <h1>Our Service Providers</h1>
+    </div>
+
+    <div class="searchConitaner">
+      <form class="searchform cf">
+        <input type="text" placeholder="what are you looking for ?" id="name-filter" />
+        <button type="submit">Search</button>
+      </form>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="card__image-holder">
+          <img class="card__image" src="" alt="" />
+        </div>
+        <div class="card-title">
+          <a href="#" class="toggle-info btn">
+            <span class="left"></span>
+            <span class="right"></span>
+          </a>
+          <h2>
+            Card title
+            <small>allawi 7beb glbi</small>
+          </h2>
+        </div>
+        <div class="card-flap flap1">
+          <div class="card-description">
+            This grid is an attempt to make something nice that works on touch
+            devices. Ignoring hover states when they're not available etc.
+          </div>
+          <div class="card-flap flap2">
+            <div class="card-actions">
+              <a href="#" class="btn">Read more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__image-holder">
+          <img class="card__image" src="../images/2.webp" alt="beach" />
+        </div>
+        <div class="card-title">
+          <a href="#" class="toggle-info btn">
+            <span class="left"></span>
+            <span class="right"></span>
+          </a>
+          <h2>
+            Card title
+            <small>allawi 7beb glbi</small>
+          </h2>
+        </div>
+        <div class="card-flap flap1">
+          <div class="card-description">
+            This grid is an attempt to make something nice that works on touch
+            devices. Ignoring hover states when they're not available etc.
+          </div>
+          <div class="card-flap flap2">
+            <div class="card-actions">
+              <a href="#" class="btn">Read more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__image-holder">
+          <img class="card__image" src="../images/3.avif" alt="mountain" />
+        </div>
+        <div class="card-title">
+          <a href="#" class="toggle-info btn">
+            <span class="left"></span>
+            <span class="right"></span>
+          </a>
+          <h2>
+            Card title
+            <small>allawi 7beb glbi</small>
+          </h2>
+        </div>
+        <div class="card-flap flap1">
+          <div class="card-description">
+            This grid is an attempt to make something nice that works on touch
+            devices. Ignoring hover states when they're not available etc.
+          </div>
+          <div class="card-flap flap2">
+            <div class="card-actions">
+              <a href="#" class="btn">Read more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__image-holder">
+          <img class="card__image" src="../images/4.jpg" alt="field" />
+        </div>
+        <div class="card-title">
+          <a href="#" class="toggle-info btn">
+            <span class="left"></span>
+            <span class="right"></span>
+          </a>
+          <h2>
+            Card title
+            <small>allawi 7beb glbi</small>
+          </h2>
+        </div>
+        <div class="card-flap flap1">
+          <div class="card-description">
+            This grid is an attempt to make something nice that works on touch
+            devices. Ignoring hover states when they're not available etc.
+          </div>
+          <div class="card-flap flap2">
+            <div class="card-actions">
+              <a href="#" class="btn">Read more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__image-holder">
+          <img class="card__image" src="../images/5.png" alt="water" />
+        </div>
+        <div class="card-title">
+          <a href="#" class="toggle-info btn">
+            <span class="left"></span>
+            <span class="right"></span>
+          </a>
+          <h2>
+            Card title
+            <small>allawi 7beb glbi</small>
+          </h2>
+        </div>
+        <div class="card-flap flap1">
+          <div class="card-description">
+            This grid is an attempt to make something nice that works on touch
+            devices. Ignoring hover states when they're not available etc.
+          </div>
+          <div class="card-flap flap2">
+            <div class="card-actions">
+              <a href="#" class="btn">Read more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__image-holder">
+          <img class="card__image" src="../images/1.webp" alt="river" />
+        </div>
+        <div class="card-title">
+          <a href="#" class="toggle-info btn">
+            <span class="left"></span>
+            <span class="right"></span>
+          </a>
+          <h2>
+            Card title
+            <small>allawi 7beb glbi</small>
+          </h2>
+        </div>
+        <div class="card-flap flap1">
+          <div class="card-description">
+            This grid is an attempt to make something nice that works on touch
+            devices. Ignoring hover states when they're not available etc.
+          </div>
+          <div class="card-flap flap2">
+            <div class="card-actions">
+              <a href="#" class="btn">Read more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__image-holder">
+          <img class="card__image" src="https://source.unsplash.com/300x225/?kite" alt="kite" />
+        </div>
+        <div class="card-title">
+          <a href="#" class="toggle-info btn">
+            <span class="left"></span>
+            <span class="right"></span>
+          </a>
+          <h2>
+            Card title
+            <small>allawi 7beb glbi</small>
+          </h2>
+        </div>
+        <div class="card-flap flap1">
+          <div class="card-description">
+            This grid is an attempt to make something nice that works on touch
+            devices. Ignoring hover states when they're not available etc.
+          </div>
+          <div class="card-flap flap2">
+            <div class="card-actions">
+              <a href="#" class="btn">Read more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__image-holder">
+          <img class="card__image" src="https://source.unsplash.com/300x225/?underwater" alt="underwater" />
+        </div>
+        <div class="card-title">
+          <a href="#" class="toggle-info btn">
+            <span class="left"></span>
+            <span class="right"></span>
+          </a>
+          <h2>
+            Card title
+            <small>allawi 7beb glbi</small>
+          </h2>
+        </div>
+        <div class="card-flap flap1">
+          <div class="card-description">
+            This grid is an attempt to make something nice that works on touch
+            devices. Ignoring hover states when they're not available etc.
+          </div>
+          <div class="card-flap flap2">
+            <div class="card-actions">
+              <a href="#" class="btn">Read more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__image-holder">
+          <img class="card__image" src="https://source.unsplash.com/300x225/?desert" alt="desert" />
+        </div>
+        <div class="card-title">
+          <a href="#" class="toggle-info btn">
+            <span class="left"></span>
+            <span class="right"></span>
+          </a>
+          <h2>
+            Card title
+            <small>Image from </small>
+          </h2>
+        </div>
+        <div class="card-flap flap1">
+          <div class="card-description">
+            This grid is an attempt to make something nice that works on touch
+            devices. Ignoring hover states when they're not available etc.
+          </div>
+          <div class="card-flap flap2">
+            <div class="card-actions">
+              <a href="#" class="btn">Read more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+  <script>
+    /////for cards logic
+    $(document).ready(function () {
+      var zindex = 10;
+
+      $("div.card").click(function (e) {
+        e.preventDefault();
+
+        var isShowing = false;
+
+        if ($(this).hasClass("show")) {
+          isShowing = true;
+        }
+
+        if ($("div.cards").hasClass("showing")) {
+          // A card is already in view
+          $("div.card.show").removeClass("show");
+
+          if (isShowing) {
+            // This card was showing - reset the grid
+            $("div.cards").removeClass("showing");
+          } else {
+            // This card isn't showing - get in with it
+            $(this).css({ zIndex: zindex }).addClass("show");
+          }
+
+          zindex++;
+        } else {
+          // No cards in view
+          $("div.cards").addClass("showing");
+          $(this).css({ zIndex: zindex }).addClass("show");
+
+          zindex++;
+        }
+      });
+
+      $("#name-filter").on("input", function () {
+        var filterValue = $(this).val().toLowerCase();
+        $(".card")
+          .hide()
+          .filter(function () {
+            return $(this)
+              .find("h2")
+              .text()
+              .toLowerCase()
+              .includes(filterValue);
+          })
+          .show();
+      });
+    });
+
+    // Filter by name
+  </script>
+</body>
+
+</html>

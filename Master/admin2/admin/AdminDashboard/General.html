@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Candal|Lora" rel="stylesheet">
+
+    <!-- Custom Styling -->
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <!-- Admin Styling -->
+    <link rel="stylesheet" href="../../css/admin.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+    <title>Admin Section - Add Topic</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="/Home/HomePage.html"><img src="/Img/Screenshot 2023-11-25 141054.png" alt=""></a>
+        </div>
+    </header>
+
+
+    <!-- Admin Page Wrapper -->
+    <div class="admin-wrapper">
+
+        <!-- Left Sidebar -->
+        <div class="left-sidebar">
+            <ul>
+                <li><a href="/Home/HomePage.html">Home</a></li>
+                <li><a href="/admin2/admin/AdminDashboard/General.html">General</a></li>
+                <li><a href="/admin2/admin/AdminDashboard/ProfileAdmin.html">Profile</a></li>
+                <li><a href="/admin2/admin/AdminDashboard/Artisans.html">Artisans</a></li>
+            </ul>
+        </div>
+        <!-- // Left Sidebar -->
+
+
+        <!-- Admin Content -->
+        <div class="admin-content">
+            <h2 class="page-title">General</h2>
+            <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+
+            <div class="content">
+
+                
+                <div class="container">
+                    <div class="users">
+                        <div>
+                            <i class="fa-solid fa-user"
+                                style="color: red; height: 100%; display: flex; align-items: center; margin-left: 50px; font-size: 40px;"></i>
+                        </div>
+                        <div
+                            style="color: white; display: flex; align-items: center; margin-right: 25px; font-size: 25px;">
+                            <p>Users: <span id="usersCount">Loading...</span></p>
+                        </div>
+                    </div>
+
+                    <div class="users">
+                        <div>
+                            <i class="fa-solid fa-user-gear"
+                                style="color: red; height: 100%; display: flex; align-items: center; margin-left: 50px; font-size: 40px;"></i>
+                        </div>
+                        <div
+                            style="color: white; display: flex; align-items: center; margin-right: 25px; font-size: 25px;">
+                            <p>Artisans: <span id="artisansCount">Loading...</span></p>
+                        </div>
+                    </div>
+                    <!-- <div class="users">
+                        <div>
+                            <i class="fa-solid fa-user-tie"
+                                style="color: red; height: 100%; display: flex; align-items: center; margin-left: 50px; font-size: 40px;"></i>
+                        </div>
+                        <div
+                            style="color: white; display: flex; align-items: center; margin-right: 25px; font-size: 25px;">
+                            <p>Artisans:<span> </span></p>
+                        </div> -->
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </div>
+    <!-- // Admin Content -->
+
+    </div>
+    <!-- // Page Wrapper -->
+
+
+</body>
+<script>
+
+    var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+    var yValues = [55, 49, 44, 24, 15];
+    var barColors = ["red", "green", "blue", "orange", "brown"];
+
+    new Chart("myChart", {
+        type: "bar",
+        data: {
+            labels: xValues,
+            datasets: [{
+                backgroundColor: barColors,
+                data: yValues
+            }]
+        },
+        options: {
+            legend: { display: false },
+            title: {
+                display: true,
+                text: "World Wine Production 2018"
+            }
+        }
+    });
+
+
+    fetch('http://127.0.0.1:8000/api/users')
+        .then(response => response.json())
+        .then(data => {
+            console.log(data)
+            displayUserCounts(data.users);
+        })
+        .catch(error => console.error('Error fetching users data:', error));
+
+    // دالة لعرض عدد المستخدمين والحرفيين
+    function displayUserCounts(users) {
+        // الحصول على عدد المستخدمين والحرفيين
+        const usersCount = users.length;
+        const artisansCount = users.filter(user => user.role.id === 2).length;
+
+        // عرض عدد المستخدمين والحرفيين في الواجهة
+        const usersElement = document.getElementById('usersCount');
+        const artisansElement = document.getElementById('artisansCount');
+
+        if (usersElement) {
+            usersElement.textContent = ` ${usersCount}`;
+        }
+
+        if (artisansElement) {
+            artisansElement.textContent = ` ${artisansCount}`;
+        }
+    }
+
+</script>
+
+</html>
